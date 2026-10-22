@@ -1,0 +1,171 @@
+<mxfile host="Electron">
+  <diagram name="BPMN — сайт-визитка" id="bpmn1">
+    <mxGraphModel dx="724" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=14;" value="Работа сайта-визитки (HTTP + mailto:)" vertex="1">
+          <mxGeometry height="640" width="2040" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="laneU" parent="pool" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=13;" value="Пользователь" vertex="1">
+          <mxGeometry height="160" width="2000" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="laneU" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Нужно открыть&lt;br&gt;сайт-визитку" vertex="1">
+          <mxGeometry height="40" width="40" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="laneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ввести адрес&lt;br&gt;сайта-визитки" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" parent="laneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Просмотреть визитку,&lt;br&gt;кликнуть по mailto:" vertex="1">
+          <mxGeometry height="60" width="120" x="1240" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RJs-6Ewsxwz-mmtbf2wa-1" edge="1" parent="laneU" source="t10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="20" />
+              <mxPoint x="1300" y="20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" parent="laneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Выбрать и настроить&lt;br&gt;почтовый клиент" vertex="1">
+          <mxGeometry height="60" width="120" x="1440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" parent="laneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ввести текст,&lt;br&gt;нажать «Отправить»" vertex="1">
+          <mxGeometry height="60" width="120" x="1600" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="laneB" parent="pool" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=13;" value="Браузер" vertex="1">
+          <mxGeometry height="160" width="2000" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="laneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отправить HTTP-запрос&lt;br&gt;GET&lt;br&gt;/index_Kozlov_A_D.html" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="laneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Разобрать HTML,&lt;br&gt;запросить&lt;br&gt;GET /avatar.jpg" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="laneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отрисовать&lt;br&gt;страницу" vertex="1">
+          <mxGeometry height="60" width="120" x="1120" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" parent="laneB" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="Почтовый клиент&lt;br&gt;назначен?" vertex="1">
+          <mxGeometry height="40" width="40" x="1360" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="laneS" parent="pool" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=13;" value="Веб-сервер" vertex="1">
+          <mxGeometry height="160" width="2000" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="laneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Принять и обработать&lt;br&gt;запрос" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="laneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Передать avatar.jpg&lt;br&gt;(200 OK)" vertex="1">
+          <mxGeometry height="60" width="120" x="1000" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" parent="laneS" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="Копия в кэше&lt;br&gt;актуальна?" vertex="1">
+          <mxGeometry height="40" width="40" x="600" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="laneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ&lt;br&gt;304 Not Modified" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="laneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ 200 OK,&lt;br&gt;передать HTML" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" parent="laneS" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="840" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="laneS" source="g1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t4" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="laneS" source="g1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t5" value="нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="laneS" source="t4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="g2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="laneS" source="t5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="g2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="laneM" parent="pool" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=13;" value="Почтовый клиент" vertex="1">
+          <mxGeometry height="160" width="2000" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" parent="laneM" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Открыть письмо&lt;br&gt;с адресом и темой" vertex="1">
+          <mxGeometry height="60" width="120" x="1440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" parent="laneM" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отправить письмо&lt;br&gt;адресату" vertex="1">
+          <mxGeometry height="60" width="120" x="1760" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="laneM" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Письмо&lt;br&gt;отправлено" vertex="1">
+          <mxGeometry height="40" width="40" x="1920" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="t1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="g1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="1" source="g2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="t6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="t7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f12" edge="1" parent="1" source="t8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f13" edge="1" parent="1" source="t9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="g3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f14" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;entryX=0.5;entryY=1;" target="t10" value="нет">
+          <mxGeometry relative="1" x="0.1826" as="geometry">
+            <mxPoint x="1480" y="280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f16" edge="1" parent="1" source="g3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;" target="t11" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f17" edge="1" parent="1" source="t11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f18" edge="1" parent="1" source="t12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="t13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f19" edge="1" parent="1" source="t13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
