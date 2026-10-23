@@ -1,52 +1,55 @@
 <mxfile host="Electron">
   <diagram name="Полная сеть Петри" id="d1">
-    <mxGraphModel dx="1279" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1800" math="0" shadow="0">
+    <mxGraphModel dx="1125" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="src" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;▼&lt;/span&gt;&lt;br&gt;&lt;b&gt;Исток&lt;/b&gt;&lt;br&gt;(начало рассмотрения&lt;div&gt;процесса)&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="80" x="200" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="s1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Автомобиль&lt;br&gt;припаркован&lt;br&gt;в платной&lt;div&gt;зоне&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="80" x="200" y="162" as="geometry" />
-        </mxCell>
-        <mxCell id="e1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Запуск&lt;br&gt;приложения&lt;br&gt;«Парковки&lt;br&gt;машин»" vertex="1">
-          <mxGeometry height="80" width="80" x="200" y="282" as="geometry" />
-        </mxCell>
-        <mxCell id="p1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="Геолокация&lt;br&gt;определила&lt;br&gt;зону" vertex="1">
-          <mxGeometry height="80" width="80" x="40" y="402" as="geometry" />
-        </mxCell>
-        <mxCell id="s2" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Приложение&lt;br&gt;открыто" vertex="1">
-          <mxGeometry height="80" width="80" x="200" y="402" as="geometry" />
-        </mxCell>
-        <mxCell id="p1n" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="Геолокация&lt;br&gt;не определила&lt;br&gt;зону" vertex="1">
-          <mxGeometry height="80" width="80" x="360" y="402" as="geometry" />
-        </mxCell>
-        <mxCell id="tA" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
-          <mxGeometry height="6" width="80" x="120" y="522" as="geometry" />
-        </mxCell>
-        <mxCell id="tB" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
-          <mxGeometry height="6" width="80" x="280" y="522" as="geometry" />
-        </mxCell>
-        <mxCell id="e2" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Подстановка&lt;br&gt;зоны по&lt;br&gt;геолокации" vertex="1">
-          <mxGeometry height="80" width="80" x="120" y="562" as="geometry" />
-        </mxCell>
-        <mxCell id="e3" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Ввод номера&lt;br&gt;зоны вручную&lt;br&gt;с таблички" vertex="1">
-          <mxGeometry height="80" width="80" x="280" y="562" as="geometry" />
-        </mxCell>
-        <mxCell id="qRuS2TnId_JXp9gqC5gY-5" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qRuS2TnId_JXp9gqC5gY-4">
+        <mxCell id="sR0N5EX2eESggxBacnXV-4" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;" target="sR0N5EX2eESggxBacnXV-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s3" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Парковочная&lt;br&gt;зона&lt;br&gt;определена" vertex="1">
-          <mxGeometry height="80" width="80" x="200" y="682" as="geometry" />
+        <mxCell id="s1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Автомобиль&lt;br&gt;припаркован&lt;br&gt;в платной&lt;div&gt;зоне&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Запуск&lt;br&gt;приложения&lt;br&gt;«Парковки&lt;br&gt;машин»" vertex="1">
+          <mxGeometry height="80" width="80" x="200" y="319" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="Геолокация&lt;br&gt;определила&lt;br&gt;зону" vertex="1">
+          <mxGeometry height="80" width="80" x="40" y="439" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Приложение&lt;br&gt;открыто" vertex="1">
+          <mxGeometry height="80" width="80" x="200" y="439" as="geometry" />
+        </mxCell>
+        <mxCell id="p1n" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="Геолокация&lt;br&gt;не определила&lt;br&gt;зону" vertex="1">
+          <mxGeometry height="80" width="80" x="360" y="439" as="geometry" />
+        </mxCell>
+        <mxCell id="tA" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="6" width="80" x="120" y="553" as="geometry" />
+        </mxCell>
+        <mxCell id="tB" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="6" width="80" x="280" y="553" as="geometry" />
+        </mxCell>
+        <mxCell id="E59OewEH-sEu42jpjXWw-1" edge="1" parent="1" source="e2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="qRuS2TnId_JXp9gqC5gY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Подстановка&lt;br&gt;зоны по&lt;br&gt;геолокации" vertex="1">
+          <mxGeometry height="80" width="80" x="120" y="599" as="geometry" />
+        </mxCell>
+        <mxCell id="E59OewEH-sEu42jpjXWw-2" edge="1" parent="1" source="e3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="qRuS2TnId_JXp9gqC5gY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Ввод номера&lt;br&gt;зоны вручную&lt;br&gt;с таблички" vertex="1">
+          <mxGeometry height="80" width="80" x="280" y="599" as="geometry" />
         </mxCell>
         <mxCell id="e4" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Выбор&lt;br&gt;автомобиля и&lt;br&gt;длительности&lt;br&gt;стоянки" vertex="1">
-          <mxGeometry height="80" width="80" x="680" y="162" as="geometry" />
+          <mxGeometry height="80" width="80" x="680" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="s4" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Параметры&lt;br&gt;парковки&lt;br&gt;заданы" vertex="1">
+        <mxCell id="s4" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;■&lt;/span&gt;&lt;br&gt;Нажатие&lt;br&gt;«Оплатить»,&lt;br&gt;отправка&lt;br&gt;платежа" vertex="1">
           <mxGeometry height="80" width="80" x="680" y="282" as="geometry" />
         </mxCell>
-        <mxCell id="e5" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Нажатие&lt;br&gt;«Оплатить»,&lt;br&gt;отправка&lt;br&gt;платежа" vertex="1">
+        <mxCell id="e5" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;●&lt;/span&gt;&lt;br&gt;Ожидание&lt;br&gt;ответа банка&lt;br&gt;о платеже" vertex="1">
           <mxGeometry height="80" width="80" x="680" y="402" as="geometry" />
         </mxCell>
         <mxCell id="p2" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="На карте&lt;br&gt;достаточно&lt;br&gt;средств" vertex="1">
@@ -61,28 +64,25 @@
         <mxCell id="tD" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
           <mxGeometry height="6" width="80" x="760" y="522" as="geometry" />
         </mxCell>
+        <mxCell id="BRL8r0zppDnGO3HOWHBT-1" edge="1" parent="1" source="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="e8">
+          <mxGeometry relative="1" x="0.1163" as="geometry" />
+        </mxCell>
         <mxCell id="e6" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Списание&lt;br&gt;средств,&lt;br&gt;регистрация&lt;br&gt;сессии" vertex="1">
           <mxGeometry height="80" width="80" x="600" y="562" as="geometry" />
         </mxCell>
         <mxCell id="e7" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Пополнение&lt;br&gt;счёта карты" vertex="1">
           <mxGeometry height="80" width="80" x="760" y="562" as="geometry" />
         </mxCell>
-        <mxCell id="s5" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Оплата прошла,&lt;br&gt;списание&lt;br&gt;времени&lt;br&gt;начато" vertex="1">
-          <mxGeometry height="80" width="80" x="600" y="682" as="geometry" />
-        </mxCell>
         <mxCell id="e8" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;■&lt;/span&gt;&lt;br&gt;Отправка&lt;br&gt;Push-&lt;br&gt;уведомления" vertex="1">
-          <mxGeometry height="80" width="80" x="760" y="682" as="geometry" />
+          <mxGeometry height="80" width="80" x="600" y="679" as="geometry" />
         </mxCell>
         <mxCell id="s6" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;●&lt;/span&gt;&lt;br&gt;Push-&lt;br&gt;уведомление&lt;br&gt;получено" vertex="1">
-          <mxGeometry height="80" width="80" x="920" y="682" as="geometry" />
+          <mxGeometry height="80" width="80" x="760" y="679" as="geometry" />
         </mxCell>
         <mxCell id="snk" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;span style=&quot;font-size:13px&quot;&gt;▲&lt;/span&gt;&lt;br&gt;&lt;b&gt;Сток&lt;/b&gt;&lt;br&gt;(завершение&lt;br&gt;рассмотрения&lt;br&gt;процесса)" vertex="1">
-          <mxGeometry height="80" width="80" x="920" y="800" as="geometry" />
+          <mxGeometry height="80" width="80" x="880" y="679" as="geometry" />
         </mxCell>
         <mxCell id="ed0" edge="1" parent="1" source="src" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ed1" edge="1" parent="1" source="s1" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="e1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ed2" edge="1" parent="1" source="e1" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s2">
@@ -104,12 +104,6 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ed8" edge="1" parent="1" source="tB" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="e3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ed9" edge="1" parent="1" source="e2" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ed10" edge="1" parent="1" source="e3" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ed12" edge="1" parent="1" source="e4" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s4">
@@ -136,12 +130,6 @@
         <mxCell id="ed19" edge="1" parent="1" source="tD" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="e7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ed20" edge="1" parent="1" source="e6" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ed21" edge="1" parent="1" source="s5" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="e8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="ed22" edge="1" parent="1" source="e8" style="endArrow=block;endFill=1;html=1;rounded=0;endSize=6;" target="s6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -163,9 +151,9 @@
           <mxGeometry height="20" width="34" x="770" y="302" as="geometry" />
         </mxCell>
         <mxCell id="qRuS2TnId_JXp9gqC5gY-4" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;*&lt;/font&gt;" vertex="1">
-          <mxGeometry height="80" width="80" x="200" y="800" as="geometry" />
+          <mxGeometry height="80" width="80" x="200" y="719" as="geometry" />
         </mxCell>
-        <mxCell id="qRuS2TnId_JXp9gqC5gY-7" edge="1" parent="1" source="qRuS2TnId_JXp9gqC5gY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="e4">
+        <mxCell id="qRuS2TnId_JXp9gqC5gY-7" edge="1" parent="1" source="qRuS2TnId_JXp9gqC5gY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="e4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qRuS2TnId_JXp9gqC5gY-6" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;*&lt;/font&gt;" vertex="1">
@@ -212,6 +200,18 @@
           <mxGeometry height="40" width="160" x="160" as="geometry">
             <mxRectangle height="40" width="160" as="alternateBounds" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="sR0N5EX2eESggxBacnXV-1" parent="1" style="fontFamily=Times New Roman;html=1;whiteSpace=wrap;ellipse;aspect=fixed;fontSize=10;spacing=2;" value="Действует&lt;br&gt;платный режим&lt;br&gt;парковки" vertex="1">
+          <mxGeometry height="80" width="80" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sR0N5EX2eESggxBacnXV-5" edge="1" parent="1" source="sR0N5EX2eESggxBacnXV-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="e1">
+          <mxGeometry relative="1" x="0.1163" as="geometry" />
+        </mxCell>
+        <mxCell id="sR0N5EX2eESggxBacnXV-2" parent="1" style="rounded=1;arcSize=50;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="6" width="80" x="200" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="sR0N5EX2eESggxBacnXV-3" edge="1" parent="1" source="sR0N5EX2eESggxBacnXV-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;" target="sR0N5EX2eESggxBacnXV-2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
