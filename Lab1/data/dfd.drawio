@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="DFD" id="dfd1">
-    <mxGraphModel dx="1125" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="700" math="0" shadow="0">
+    <mxGraphModel dx="1125" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,17 +19,11 @@
         <mxCell id="P2t" parent="P2" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=12;" value="Обработка запроса&lt;br&gt;веб-сервером" vertex="1">
           <mxGeometry height="80" width="200" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="D1" parent="1" style="shape=partialRectangle;right=0;html=1;whiteSpace=wrap;spacingLeft=40;fontFamily=Times New Roman;fontSize=12;" value="Файлы сайта" vertex="1">
-          <mxGeometry height="80" width="160" x="1000" y="80" as="geometry" />
+        <mxCell id="D1" parent="1" style="shape=partialRectangle;right=0;html=1;whiteSpace=wrap;spacingLeft=40;fontFamily=Times New Roman;fontSize=12;" value="Файлы сайта&lt;br&gt;(HTML, avatar.jpg)" vertex="1">
+          <mxGeometry height="80" width="200" x="1000" y="80" as="geometry" />
         </mxCell>
         <mxCell id="D1n" parent="D1" style="shape=partialRectangle;top=0;bottom=0;left=0;html=1;fillColor=none;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="D1" vertex="1">
           <mxGeometry height="80" width="23.040000000000006" as="geometry" />
-        </mxCell>
-        <mxCell id="D2" parent="1" style="shape=partialRectangle;right=0;html=1;whiteSpace=wrap;spacingLeft=40;fontFamily=Times New Roman;fontSize=12;" value="Кэш браузера" vertex="1">
-          <mxGeometry height="80" width="200" x="280" y="320" as="geometry" />
-        </mxCell>
-        <mxCell id="D2n" parent="D2" style="shape=partialRectangle;top=0;bottom=0;left=0;html=1;fillColor=none;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="D2" vertex="1">
-          <mxGeometry height="80" width="32.72727272727273" as="geometry" />
         </mxCell>
         <mxCell id="P3" parent="1" style="swimlane;rounded=1;arcSize=12;startSize=40;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="3" vertex="1">
           <mxGeometry height="120" width="200" x="640" y="280" as="geometry" />
@@ -38,28 +32,21 @@
           <mxGeometry height="80" width="200" y="40" as="geometry" />
         </mxCell>
         <mxCell id="P4" parent="1" style="swimlane;rounded=1;arcSize=12;startSize=40;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="4" vertex="1">
-          <mxGeometry height="120" width="200" x="640" y="520" as="geometry" />
+          <mxGeometry height="120" width="200" x="240" y="520" as="geometry" />
         </mxCell>
-        <mxCell id="P4t" parent="P4" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=12;" value="Формирование&lt;br&gt;письма по mailto:" vertex="1">
+        <mxCell id="P4t" parent="P4" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=12;" value="Обработка&lt;br&gt;ссылки mailto:" vertex="1">
           <mxGeometry height="80" width="200" y="40" as="geometry" />
         </mxCell>
         <mxCell id="E2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="Автор визитки&lt;br&gt;(адресат письма)" vertex="1">
-          <mxGeometry height="80" width="160" x="1000" y="560" as="geometry" />
+          <mxGeometry height="80" width="160" x="260" y="720" as="geometry" />
         </mxCell>
         <mxCell id="d1" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="P1" value="URL сайта-визитки">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d2" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="P1" value="сведения о&lt;br&gt;кэшированной копии">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="340" y="320" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="d3" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="P2" value="HTTP-запрос&lt;br&gt;GET /index_Kozlov_A_D.html">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d4" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="P2" value="index_Kozlov_A_D.html,&lt;br&gt;avatar.jpg">
+        <mxCell id="d4" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="P2" value="HTML-файл,&lt;br&gt;avatar.jpg">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="880" y="120" />
@@ -67,61 +54,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="d5" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="P3" value="HTTP-ответы:&lt;br&gt;HTML, avatar.jpg&lt;br&gt;(200 OK / 304)">
+        <mxCell id="d5" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="P3" value="HTTP-ответы:&lt;br&gt;HTML, avatar.jpg&lt;br&gt;(200 OK / 404)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="d6" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" target="P2" value="HTTP-запрос&lt;br&gt;GET /avatar.jpg">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d7" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="P3t" value="копия страницы">
-          <mxGeometry relative="1" x="0.0667" as="geometry">
-            <Array as="points">
-              <mxPoint x="510" y="340" />
-              <mxPoint x="510" y="340" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d8" edge="1" parent="1" source="P3t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="D2" value="сохранение копии">
-          <mxGeometry relative="1" x="-0.0147" as="geometry">
-            <Array as="points">
-              <mxPoint x="540" y="380" />
-              <mxPoint x="540" y="380" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d9" edge="1" parent="1" source="P3t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="E1" value="отображённая&lt;br&gt;страница визитки">
-          <mxGeometry relative="1" x="0.2275" as="geometry">
-            <Array as="points">
-              <mxPoint x="655" y="480" />
-              <mxPoint x="160" y="480" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d10" edge="1" parent="1" source="P3t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="P4" value="ссылка mailto:&lt;br&gt;(адрес, тема)">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="740" y="440" />
-              <mxPoint x="740" y="440" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d11" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;" target="P4t" value="текст письма">
-          <mxGeometry relative="1" x="0.0098" as="geometry">
-            <Array as="points">
-              <mxPoint x="120" y="400" />
-              <mxPoint x="120" y="600" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="d12" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;" target="E2" value="письмо">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="880" y="600" />
-              <mxPoint x="880" y="600" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-      </root>
+        <mxCell id="P5" parent="1" style="swimlane;rounded=1;arcSize=12;startSize=40;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="5" vertex="1"><mxGeometry x="640" y="520" width="200" height="120" as="geometry" /></mxCell><mxCell id="P5t" parent="P5" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=12;" value="Обработка&lt;br&gt;ссылки tel:" vertex="1"><mxGeometry x="0" y="40" width="200" height="80" as="geometry" /></mxCell><mxCell id="P6" parent="1" style="swimlane;rounded=1;arcSize=12;startSize=40;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" value="6" vertex="1"><mxGeometry x="1000" y="520" width="200" height="120" as="geometry" /></mxCell><mxCell id="P6t" parent="P6" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=12;" value="Переход по&lt;br&gt;внешней ссылке" vertex="1"><mxGeometry x="0" y="40" width="200" height="80" as="geometry" /></mxCell><mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="Приложение&lt;br&gt;для звонков" vertex="1"><mxGeometry x="660" y="720" width="160" height="80" as="geometry" /></mxCell><mxCell id="E4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="Внешние веб-сайты&lt;br&gt;(Telegram, ВК,&lt;br&gt;GitHub)" vertex="1"><mxGeometry x="1020" y="720" width="160" height="80" as="geometry" /></mxCell><mxCell id="n1" edge="1" parent="1" source="P3" target="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" value="страница визитки&lt;br&gt;(или сообщение 404)"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n2" edge="1" parent="1" source="E1" target="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.8333;entryDx=0;entryDy=0;" value="выбор ссылки&lt;br&gt;(клик)"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n3" edge="1" parent="1" source="P3" target="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="адрес и тема&lt;br&gt;(mailto:)"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="680" y="460" /><mxPoint x="340" y="460" /></Array></mxGeometry></mxCell><mxCell id="n4" edge="1" parent="1" source="P3" target="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="номер телефона&lt;br&gt;(tel:)"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n5" edge="1" parent="1" source="P3" target="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="URL профиля&lt;br&gt;(https:)"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="800" y="460" /><mxPoint x="1100" y="460" /></Array></mxGeometry></mxCell><mxCell id="n6" edge="1" parent="1" source="E1" target="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="текст письма"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="120" y="580" /></Array></mxGeometry></mxCell><mxCell id="n7" edge="1" parent="1" source="P4" target="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="письмо"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n8" edge="1" parent="1" source="P5" target="E3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="номер телефона"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n9" edge="1" parent="1" source="P6" target="E4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" value="HTTP-запрос&lt;br&gt;GET"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n10" edge="1" parent="1" source="E4" target="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" value="страница&lt;br&gt;профиля"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="n11" edge="1" parent="1" source="P6" target="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" value="страница профиля&lt;br&gt;в новой вкладке"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1240" y="580" /><mxPoint x="1240" y="860" /><mxPoint x="80" y="860" /></Array></mxGeometry></mxCell></root>
     </mxGraphModel>
   </diagram>
 </mxfile>
