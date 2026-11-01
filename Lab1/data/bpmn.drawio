@@ -1,0 +1,267 @@
+<mxfile host="Electron" pages="3">
+  <diagram name="Часть 1 — запрос страницы" id="a">
+    <mxGraphModel dx="953" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="apool" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=14;" value="Работа сайта-визитки по HTTP. Часть 1: запрос страницы" vertex="1">
+          <mxGeometry height="480" width="1120" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="alaneU" parent="apool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Пользователь" vertex="1">
+          <mxGeometry height="160" width="1080" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="astart" parent="alaneU" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Нужно открыть&lt;br&gt;сайт-визитку" vertex="1">
+          <mxGeometry height="40" width="40" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="at1" parent="alaneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ввести адрес&lt;br&gt;сайта-визитки" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="alaneB" parent="apool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Браузер" vertex="1">
+          <mxGeometry height="160" width="1080" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="at2" parent="alaneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отправить HTTP-запрос&lt;br&gt;GET&lt;br&gt;/index_Kozlov_A_D.html" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="at4b" parent="alaneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Показать&lt;br&gt;сообщение&lt;br&gt;об ошибке 404" vertex="1">
+          <mxGeometry height="60" width="120" x="660" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aend1" parent="alaneB" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Страница&lt;br&gt;не открыта" vertex="1">
+          <mxGeometry height="40" width="40" x="800" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="at6" parent="alaneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Разобрать HTML,&lt;br&gt;запросить&lt;br&gt;GET /avatar.jpg" vertex="1">
+          <mxGeometry height="60" width="120" x="860" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="alA" parent="alaneB" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=throwing;symbol=link;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="А" vertex="1">
+          <mxGeometry height="40" width="40" x="1010" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="alaneS" parent="apool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Веб-сервер" vertex="1">
+          <mxGeometry height="160" width="1080" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="at3" parent="alaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Найти файл&lt;br&gt;страницы" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ag1" parent="alaneS" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="Файл&lt;br&gt;найден?" vertex="1">
+          <mxGeometry height="40" width="40" x="600" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="at4" parent="alaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ&lt;br&gt;404 Not Found" vertex="1">
+          <mxGeometry height="60" width="120" x="660" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="at5" parent="alaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ 200 OK,&lt;br&gt;передать HTML" vertex="1">
+          <mxGeometry height="60" width="120" x="660" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="af1" edge="1" parent="1" source="astart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;" target="at1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af2" edge="1" parent="1" source="at1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="at2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af3" edge="1" parent="1" source="at2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="at3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af4" edge="1" parent="1" source="at3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ag1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af5" edge="1" parent="1" source="ag1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="at4" value="нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af6" edge="1" parent="1" source="ag1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="at5" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af7" edge="1" parent="1" source="at4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="at4b" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af8" edge="1" parent="1" source="at4b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aend1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af9" edge="1" parent="1" source="at5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="at6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af10" edge="1" parent="1" source="at6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="alA" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Часть 2 — загрузка фото и отрисовка" id="b">
+    <mxGraphModel dx="724" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bpool" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=14;" value="Работа сайта-визитки по HTTP. Часть 2: загрузка фото и отрисовка" vertex="1">
+          <mxGeometry height="480" width="960" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="blaneU" parent="bpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Пользователь" vertex="1">
+          <mxGeometry height="160" width="920" x="40" y="0" as="geometry" />
+        </mxCell>
+        <mxCell id="blaneB" parent="bpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Браузер" vertex="1">
+          <mxGeometry height="160" width="920" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="blaneS" parent="bpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Веб-сервер" vertex="1">
+          <mxGeometry height="160" width="920" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="blA" parent="blaneB" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=catching;symbol=link;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="А" vertex="1">
+          <mxGeometry height="40" width="40" x="80.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bt8" parent="blaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Найти файл&lt;br&gt;avatar.jpg" vertex="1">
+          <mxGeometry height="60" width="120" x="140.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bg2" parent="blaneS" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="Фото&lt;br&gt;найдено?" vertex="1">
+          <mxGeometry height="40" width="40" x="300.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bt9" parent="blaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ 200 OK,&lt;br&gt;передать фото" vertex="1">
+          <mxGeometry height="60" width="120" x="360.0" y="10.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bt10" parent="blaneS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Ответ&lt;br&gt;404 Not Found" vertex="1">
+          <mxGeometry height="60" width="120" x="360.0" y="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bgm" parent="blaneB" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="520.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bt11" parent="blaneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отрисовать страницу&lt;br&gt;(фото или текст&lt;br&gt;из alt)" vertex="1">
+          <mxGeometry height="60" width="130" x="595.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bt12" parent="blaneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Просмотреть&lt;br&gt;визитку, выбрать&lt;br&gt;действие" vertex="1">
+          <mxGeometry height="60" width="120" x="720.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="blB" parent="blaneU" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=throwing;symbol=link;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="Б" vertex="1">
+          <mxGeometry height="40" width="40" x="860.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="bf1" edge="1" parent="1" source="blA" target="bt8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf2" edge="1" parent="1" source="bt8" target="bg2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf3" edge="1" parent="1" source="bg2" target="bt9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf4" edge="1" parent="1" source="bg2" target="bt10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf5" edge="1" parent="1" source="bt9" target="bgm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf6" edge="1" parent="1" source="bt10" target="bgm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf7" edge="1" parent="1" source="bgm" target="bt11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf8" edge="1" parent="1" source="bt11" target="bt12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bf9" edge="1" parent="1" source="bt12" target="blB" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Часть 3 — действия пользователя" id="c">
+    <mxGraphModel dx="724" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1380" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cpool" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fontFamily=Times New Roman;fontSize=14;" value="Работа сайта-визитки по HTTP. Часть 3: действия пользователя" vertex="1">
+          <mxGeometry height="640" width="1290" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="claneU" parent="cpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Пользователь" vertex="1">
+          <mxGeometry height="160" width="1250" x="40" y="0" as="geometry" />
+        </mxCell>
+        <mxCell id="claneB" parent="cpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Браузер" vertex="1">
+          <mxGeometry height="160" width="1250" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="claneX" parent="cpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Внешние веб-сайты&lt;br&gt;(Telegram, ВК, GitHub)" vertex="1">
+          <mxGeometry height="160" width="1250" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="claneA" parent="cpool" style="swimlane;html=1;horizontal=0;startSize=40;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;" value="Приложения ОС&lt;br&gt;(звонки, почта)" vertex="1">
+          <mxGeometry height="160" width="1250" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="clB" parent="claneU" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=catching;symbol=link;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=13;fontStyle=1;" value="Б" vertex="1">
+          <mxGeometry height="40" width="40" x="60.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cg3" parent="claneU" style="shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;labelPosition=left;verticalLabelPosition=top;align=right;verticalAlign=bottom;labelBackgroundColor=#ffffff;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=11;" value="Действие?" vertex="1">
+          <mxGeometry height="40" width="40" x="160.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct21" parent="claneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Закрыть&lt;br&gt;вкладку" vertex="1">
+          <mxGeometry height="60" width="120" x="240.0" y="5.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cend2" parent="claneU" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;labelPosition=right;align=left;" value="Работа&lt;br&gt;завершена" vertex="1">
+          <mxGeometry height="40" width="40" x="400.0" y="15.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct13" parent="claneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Открыть новую&lt;br&gt;вкладку, запрос GET&lt;br&gt;к внешнему сайту" vertex="1">
+          <mxGeometry height="60" width="130" x="235.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct14" parent="claneX" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Вернуть&lt;br&gt;страницу профиля&lt;br&gt;(200 OK)" vertex="1">
+          <mxGeometry height="60" width="120" x="380.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct15" parent="claneB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Показать профиль&lt;br&gt;в новой вкладке" vertex="1">
+          <mxGeometry height="60" width="120" x="520.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cend4" parent="claneB" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Профиль&lt;br&gt;открыт" vertex="1">
+          <mxGeometry height="40" width="40" x="680.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct16" parent="claneA" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Открыть приложение&lt;br&gt;для звонка&lt;br&gt;с номером" vertex="1">
+          <mxGeometry height="60" width="130" x="235.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cend5" parent="claneA" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Звонок&lt;br&gt;начат" vertex="1">
+          <mxGeometry height="40" width="40" x="400.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct17" parent="claneA" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Открыть письмо&lt;br&gt;с адресом&lt;br&gt;и темой" vertex="1">
+          <mxGeometry height="60" width="120" x="740.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct18" parent="claneU" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Написать текст,&lt;br&gt;нажать&lt;br&gt;«Отправить»" vertex="1">
+          <mxGeometry height="60" width="120" x="880.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="ct19" parent="claneA" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontFamily=Times New Roman;fontSize=12;" value="Отправить&lt;br&gt;письмо&lt;br&gt;адресату" vertex="1">
+          <mxGeometry height="60" width="120" x="1020.0" y="50.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cend3" parent="claneA" style="ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=11;verticalLabelPosition=bottom;verticalAlign=top;" value="Письмо&lt;br&gt;отправлено" vertex="1">
+          <mxGeometry height="40" width="40" x="1170.0" y="60.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cf1" edge="1" parent="1" source="clB" target="cg3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf2" edge="1" parent="1" source="cg3" target="ct21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="закрыть">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf3" edge="1" parent="1" source="ct21" target="cend2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf4" edge="1" parent="1" source="cg3" target="ct13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="внешняя ссылка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf5" edge="1" parent="1" source="ct13" target="ct14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf6" edge="1" parent="1" source="ct14" target="ct15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf7" edge="1" parent="1" source="ct15" target="cend4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf8" edge="1" parent="1" source="cg3" target="ct16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="tel:">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf9" edge="1" parent="1" source="ct16" target="cend5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf10" edge="1" parent="1" source="cg3" target="ct17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="mailto:">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cf11" edge="1" parent="1" source="ct17" target="ct18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf12" edge="1" parent="1" source="ct18" target="ct19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf13" edge="1" parent="1" source="ct19" target="cend3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
