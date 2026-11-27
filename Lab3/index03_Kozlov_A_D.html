@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>v-model — Козлов А.Д.</title>
+</head>
+<body>
+<script src="vue.global.js"></script>
+
+<div id="app">
+    <svg ref="area"
+         :width="AREA_WIDTH"
+         :height="AREA_HEIGHT"
+         tabindex="0"
+         style="border: 1px dashed black; outline: none"
+         @keydown.left.prevent="move(-STEP, 0)"
+         @keydown.right.prevent="move(STEP, 0)"
+         @keydown.up.prevent="move(0, -STEP)"
+         @keydown.down.prevent="move(0, STEP)">
+        <rect :x="posX" :y="posY" :width="SIZE" :height="SIZE" fill="black"/>
+    </svg>
+    <p>
+        X: <input type="number" v-model.lazy.number="posX" :min="MIN" :max="maxX" :step="STEP">
+        Y: <input type="number" v-model.lazy.number="posY" :min="MIN" :max="maxY" :step="STEP">
+    </p>
+</div>
+
+<script>
+    const { createApp, ref, computed, onMounted } = Vue;
+
+    createApp({
+        setup() {
+            const AREA_WIDTH = 640;
+            const AREA_HEIGHT = 480;
+            const SIZE = 5;
+            const STEP = 5;
+            const MIN = 2;
+            const maxX = AREA_WIDTH - SIZE - MIN;
+            const maxY = AREA_HEIGHT - SIZE - MIN;
+
+            const area = ref(null);
+            const x = ref(randomBetween(MIN, maxX));
+            const y = ref(randomBetween(MIN, maxY));
+
+            function randomBetween(min, max) {
+                return min + Math.floor(Math.random() * (max - min + 1));
+            }
+
+            function clamp(value, max, current) {
+                if (!Number.isFinite(value)) {
+                    return current;
+                }
+                return Math.min(Math.max(value, MIN), max);
+            }
+
+            const posX = computed({
+                get: () => x.value,
+                set: value => { x.value = clamp(value, maxX, x.value); }
+            });
+            const posY = computed({
+                get: () => y.value,
+                set: value => { y.value = clamp(value, maxY, y.value); }
+            });
+
+            function move(dx, dy) {
+                posX.value = x.value + dx;
+                posY.value = y.value + dy;
+            }
+
+            onMounted(() => area.value.focus());
+
+            return {
+                AREA_WIDTH,
+                AREA_HEIGHT,
+                SIZE,
+                STEP,
+                MIN,
+                maxX,
+                maxY,
+                area,
+                posX,
+                posY,
+                move
+            };
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>

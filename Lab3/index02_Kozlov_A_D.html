@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>v-on — Козлов А.Д.</title>
+</head>
+<body>
+<script src="vue.global.js"></script>
+
+<div id="app">
+    <input :type="inputType" alt="image">
+    <button @click="nextType">Сменить режим</button>
+    <p>Режим: {{ inputType }} ({{ typeIndex + 1 }} из {{ inputTypes.length }})</p>
+</div>
+
+<script>
+    const { createApp, ref, computed } = Vue;
+
+    createApp({
+        setup() {
+            const inputTypes = [
+                'text', 'password', 'email', 'number', 'tel', 'url', 'search',
+                'date', 'time', 'datetime-local', 'month', 'week', 'color', 'range',
+                'checkbox', 'radio', 'file', 'image', 'button', 'submit', 'reset', 'hidden'
+            ];
+            const typeIndex = ref(0);
+            const inputType = computed(() => inputTypes[typeIndex.value]);
+
+            function nextType() {
+                typeIndex.value = (typeIndex.value + 1) % inputTypes.length;
+            }
+
+            return {
+                inputTypes,
+                typeIndex,
+                inputType,
+                nextType
+            };
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>
