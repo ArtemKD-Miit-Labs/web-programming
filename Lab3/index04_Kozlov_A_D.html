@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>v-if — Козлов А.Д.</title>
+</head>
+<body>
+<script src="vue.global.js"></script>
+
+<div id="app">
+    <p>
+        <label><input type="radio" value="on" v-model="mode"> Включён</label>
+        <label><input type="radio" value="off" v-model="mode"> Выключен</label>
+    </p>
+
+    <svg width="120" height="320">
+        <rect x="10" y="10" width="100" height="300" rx="15" fill="#333333"/>
+        <circle v-if="isLit('red')" cx="60" cy="60" r="38" fill="red"/>
+        <circle v-else cx="60" cy="60" r="38" fill="#555555"/>
+        <circle v-if="isLit('yellow')" cx="60" cy="160" r="38" fill="yellow"/>
+        <circle v-else cx="60" cy="160" r="38" fill="#555555"/>
+        <circle v-if="isLit('green')" cx="60" cy="260" r="38" fill="limegreen"/>
+        <circle v-else cx="60" cy="260" r="38" fill="#555555"/>
+    </svg>
+
+    <p v-if="mode === 'on'">Горит {{ phaseNames[phase] }} сигнал, осталось {{ remaining }} с</p>
+    <p v-else>Светофор выключен</p>
+
+    <p><label><input type="checkbox" v-model="showSettings"> Настройки</label></p>
+    <template v-if="showSettings">
+        <p>Зелёный сигнал, с: <input type="number" v-model.number="greenTime" min="1" max="60"></p>
+        <p>Красный сигнал, с: <input type="number" v-model.number="redTime" min="1" max="60"></p>
+        <p>Жёлтый сигнал: {{ YELLOW_TIME }} с</p>
+    </template>
+</div>
+
+<script>
+    const { createApp, ref, watch, onUnmounted } = Vue;
+
+    createApp({
+        setup() {
+            const YELLOW_TIME = 2;
+            const phaseNames = { green: 'зелёный', yellow: 'жёлтый', red: 'красный' };
+            const nextPhase = { green: 'yellow', yellow: 'red', red: 'green' };
+
+            const mode = ref('on');
+            const phase = ref('green');
+            const remaining = ref(0);
+            const showSettings = ref(false);
+            const greenTime = ref(5);
+            const redTime = ref(5);
+            let timer = null;
+
+            function validTime(value) {
+                return Number.isFinite(value) && value >= 1 ? Math.round(value) : 1;
+            }
+
+            function phaseDuration(name) {
+                if (name === 'green') {
+                    return validTime(greenTime.value);
+                }
+                if (name === 'red') {
+                    return validTime(redTime.value);
+                }
+                return YELLOW_TIME;
+            }
+
+            function tick() {
+                remaining.value--;
+                if (remaining.value <= 0) {
+                    phase.value = nextPhase[phase.value];
+                    remaining.value = phaseDuration(phase.value);
+                }
+            }
+
+            function isLit(name) {
+                return mode.value === 'on' && phase.value === name;
+            }
+
+            watch(mode, value => {
+                clearInterval(timer);
+                if (value === 'on') {
+                    phase.value = 'green';
+                    remaining.value = phaseDuration('green');
+                    timer = setInterval(tick, 1000);
+                }
+            }, { immediate: true });
+
+            onUnmounted(() => clearInterval(timer));
+
+            return {
+                YELLOW_TIME,
+                phaseNames,
+                mode,
+                phase,
+                remaining,
+                showSettings,
+                greenTime,
+                redTime,
+                isLit
+            };
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>
